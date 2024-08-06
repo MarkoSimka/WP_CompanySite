@@ -1,0 +1,25 @@
+# WordPress core files
+/wp-admin/
+/wp-includes/
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backup-*
+/wp-content/languages/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+debug.log
+
+# Database
+*.sql
+
+# Vendor
+/vendor/
+
+# IDE
+.idea/
+.vscode/
