@@ -22,6 +22,11 @@ $address = $_POST['address'] ?? '';
 $post_code = $_POST['post_code'] ?? '';
 $treatment_interest = $_POST['treatment_interest'] ?? '';
 $opt_email = $_POST['opt_email'] ?? '';
+$opt_letter = $_POST['opt_letter'] ?? '';
+$opt_sms = $_POST['opt_sms'] ?? '';
+$opt_newsletter = $_POST['opt_newsletter'] ?? '';
+$opt_phone = $_POST['opt_phone'] ?? '';
+$redirect_link = $_POST['redirect_link'] ?? '';
 
 // Prepare the data for cURL
 $data = [
@@ -40,7 +45,12 @@ $data = [
     'address' => $address,
     'post_code' => $post_code,
     'treatment_interest' => $treatment_interest,
-    'opt_email' => $opt_email
+    'opt_email' => $opt_email,
+    'opt_letter' => $opt_letter,
+    'opt_sms' => $opt_sms,
+    'opt_newsletter' => $opt_newsletter,
+    'opt_phone' => $opt_phone,
+    'redirect_link' => $redirect_link
 ];
 
 // Initialize cURL

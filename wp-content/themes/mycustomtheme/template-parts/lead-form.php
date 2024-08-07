@@ -73,14 +73,25 @@
             </div>
         </div>
 
-        <label for="post_code">Post Code:</label>
-        <input type="text" id="post_code" name="post_code">
-
         <label for="treatment_interest">Treatment Interest:</label>
         <input type="text" id="treatment_interest" name="treatment_interest">
 
-        <label for="opt_email">Opt-in Email:</label>
-        <input type="checkbox" id="opt_email" name="opt_email">
+        <label for="opt_email">Subscribe to Email Reminders & Notifications:</label>
+        <input type="checkbox" id="opt_email" name="opt_email" value="1">
+
+        <label for="opt_letter">Subscribe to Letters:</label>
+        <input type="checkbox" id="opt_letter" name="opt_letter" value="1">
+
+        <label for="opt_sms">Subscribe to SMS:</label>
+        <input type="checkbox" id="opt_sms" name="opt_sms" value="1">
+
+        <label for="opt_newsletter">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="opt_newsletter" name="opt_newsletter" value="1">
+
+        <label for="opt_phone">Subscribe to Phone Calls:</label>
+        <input type="checkbox" id="opt_phone" name="opt_phone" value="1">
+
+        <input type="hidden" id="redirect_link" name="redirect_link" value="http://localhost/wordpress/">
         <button type="submit">Submit</button>
     </form>
 
