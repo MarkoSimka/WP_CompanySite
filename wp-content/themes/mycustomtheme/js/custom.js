@@ -19,7 +19,11 @@ jQuery(document).ready(function ($) {
     fd.append("post_code", $("#post_code").val());
     fd.append("treatment_interest", $("#treatment_interest").val());
     fd.append("opt_email", $("#opt_email").is(":checked") ? 1 : 0);
-    fd.append("redirect_link", $("#redirect_link"));
+    fd.append("opt_letter", $("#opt_letter").is(":checked") ? 1 : 0);
+    fd.append("opt_sms", $("#opt_sms").is(":checked") ? 1 : 0);
+    fd.append("opt_newsletter", $("#opt_newsletter").is(":checked") ? 1 : 0);
+    fd.append("opt_phone", $("#opt_phone").is(":checked") ? 1 : 0);
+    fd.append("redirect_link", $("#redirect_link").val());
 
     $.ajax({
       url: "/wordpress/wp-content/themes/mycustomtheme/proxy.php",
@@ -30,7 +34,7 @@ jQuery(document).ready(function ($) {
       success: function (response) {
         console.log(response);
         $("#formMessage").html("<p>Lead created successfully!</p>");
-        // window.location.href = $("#redirect_link").val();
+        window.location.href = $("#redirect_link").val();
       },
       error: function (xhr, status, error) {
         console.log(xhr.responseText, status, error);
