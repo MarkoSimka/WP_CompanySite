@@ -1,49 +1,88 @@
 <main>
     <form id="leadForm">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+        </div>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+        </div>
 
-        <label for="lead_source">Lead Source:</label>
-        <input type="text" id="lead_source" name="lead_source">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+        </div>
 
-        <label for="salutation">Salutation:</label>
-        <input type="text" id="salutation" name="salutation">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="lead_source">Lead Source:</label>
+                <input type="text" id="lead_source" name="lead_source">
+            </div>
+            <div class="form-group">
+                <label for="salutation">Salutation:</label>
+                <input type="text" id="salutation" name="salutation">
+            </div>
+        </div>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="county">County:</label>
+                <input type="text" id="county" name="county">
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country">
+            </div>
+        </div>
 
-        <label for="county">County:</label>
-        <input type="text" id="county" name="county">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="post_code">Post Code:</label>
+                <input type="number" id="post_code" name="post_code">
+            </div>
+        </div>
 
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="country">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="telephone">Telephone:</label>
+                <input type="tel" id="telephone" name="telephone">
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile">
+            </div>
+        </div>
 
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city">
-
-        <label for="telephone">Telephone:</label>
-        <input type="tel" id="telephone" name="telephone">
-
-        <label for="mobile">Mobile:</label>
-        <input type="tel" id="mobile" name="mobile">
-
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address">
-
-        <label for="post_code">Post Code:</label>
-        <input type="text" id="post_code" name="post_code">
-
-        <label for="treatment_interest">Treatment Interest:</label>
-        <input type="text" id="treatment_interest" name="treatment_interest">
-
-        <label for="opt_email">Opt-in Email:</label>
-        <input type="checkbox" id="opt_email" name="opt_email">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="treatment_interest">Treatment Interest:</label>
+                <input type="text" id="treatment_interest" name="treatment_interest">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="opt_email">Opt-in Email:</label>
+            <input type="checkbox" id="opt_email" name="opt_email">
+        </div>
         <button type="submit">Submit</button>
     </form>
     <div id="formMessage"></div>
