@@ -57,7 +57,7 @@
         <label for="opt_phone">Subscribe to Phone Calls:</label>
         <input type="checkbox" id="opt_phone" name="opt_phone" value="1">
 
-        <input type="hidden" id="redirect_link" name="redirect_link" value="http://localhost/wordpress/">
+        <input type="hidden" id="redirect_link" name="redirect_link" value="http://localhost/wordpress">
 
         <button type="submit">Submit</button>
     </form>
