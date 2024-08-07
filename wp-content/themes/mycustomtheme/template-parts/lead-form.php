@@ -73,17 +73,17 @@
             </div>
         </div>
 
-        <div class="form-row">
-            <div class="form-group">
-                <label for="treatment_interest">Treatment Interest:</label>
-                <input type="text" id="treatment_interest" name="treatment_interest">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="opt_email">Opt-in Email:</label>
-            <input type="checkbox" id="opt_email" name="opt_email">
-        </div>
+        <label for="post_code">Post Code:</label>
+        <input type="text" id="post_code" name="post_code">
+
+        <label for="treatment_interest">Treatment Interest:</label>
+        <input type="text" id="treatment_interest" name="treatment_interest">
+
+        <label for="opt_email">Opt-in Email:</label>
+        <input type="checkbox" id="opt_email" name="opt_email">
         <button type="submit">Submit</button>
     </form>
+
     <div id="formMessage"></div>
+
 </main>
