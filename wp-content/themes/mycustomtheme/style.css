@@ -1,0 +1,46 @@
+/*
+Theme Name: My Custom Theme
+Author: Marko Simonoski
+Description: A custom theme for the assignment
+Version: 1.0
+*/
+form#leadForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+form#leadForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form#leadForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form#leadForm button {
+    padding: 10px 20px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form#leadForm button:hover {
+    background: #005a8c;
+}
+
+#formMessage {
+    margin-top: 20px;
+    text-align: center;
+}
