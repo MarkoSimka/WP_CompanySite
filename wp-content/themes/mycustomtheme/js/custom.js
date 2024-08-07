@@ -5,6 +5,7 @@ jQuery(document).ready(function ($) {
     var formData = {
       firstName: $("#firstName").val(),
       lastName: $("#lastName").val(),
+      mobile: $("#mobile").val(),
       email: $("#email").val(),
       lead_source: $("#lead_source").val(),
       salutation: $("#salutation").val(),
@@ -13,21 +14,26 @@ jQuery(document).ready(function ($) {
       country: $("#country").val(),
       city: $("#city").val(),
       telephone: $("#telephone").val(),
-      mobile: $("#mobile").val(),
       address: $("#address").val(),
       post_code: $("#post_code").val(),
       treatment_interest: $("#treatment_interest").val(),
       opt_email: $("#opt_email").is(":checked") ? 1 : 0,
-      apiKey: "MTIzMDgbd283795c5e51d3b7efd4aefbc404fb8",
+      opt_letter: $("#opt_letter").is(":checked") ? 1 : 0,
+      opt_sms: $("#opt_sms").is(":checked") ? 1 : 0,
+      opt_newsletter: $("#opt_newsletter").is(":checked") ? 1 : 0,
+      opt_phone: $("#opt_phone").is(":checked") ? 1 : 0,
+      redirect_link: $("#redirect_link").val(),
     };
 
     $.ajax({
-      url: "https://regression.pabau.me/api/leads",
+      url: "https://regression.pabau.me/OAuth2/leads/lead-curl.php",
       method: "POST",
+      crossDomain: true,
       contentType: "application/json",
       data: JSON.stringify(formData),
       success: function (response) {
-        $("#formMessage").html("<p>Lead created successfully!</p>");
+        $("#formMessage").html("<p>Lead created successfully!</p>");  
+        window.location.href = $("#redirect_link").val();
       },
       error: function (xhr, status, error) {
         $("#formMessage").html("<p>Error: " + xhr.responseText + "</p>");
