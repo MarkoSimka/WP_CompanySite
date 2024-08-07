@@ -43,8 +43,6 @@ $data = [
     'opt_email' => $opt_email
 ];
 
-print_r($data);
-
 // Initialize cURL
 $ch = curl_init($apiUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
