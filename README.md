@@ -34,7 +34,7 @@ To get started with this project, follow these steps:
     git@github.com:MarkoSimka/WP_CompanySite.git //ssh
 
 2.Set Up XAMPP and WordPress:
-  * nstall XAMPP from the [XAMPP Official Website](https://www.apachefriends.org/).
+  * Install XAMPP from the [XAMPP Official Website](https://www.apachefriends.org/).
   * Start Apache and MySQL in the XAMPP control panel or via terminal ( sudo /opt/lampp/lampp start).
   * Download and install WordPress in the htdocs folder of your XAMPP installation.
   * Create a database for WordPress in phpMyAdmin.
