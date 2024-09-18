@@ -81,9 +81,4 @@ The form captures the following information:
 ##  Contributing
 Contributions are welcome! If you have any ideas, enhancements, or bug fixes, feel free to open an issue or submit a pull request.
 
-##  License
-This project is licensed under the [MIT License](https://opensource.org/license/mit).
-
-Thank you for choosing "Dr. Pabau Dental Center Lead Generation Form". We hope this application serves as a valuable resource for your development needs. If you have any questions or need further assistance, please don't hesitate to reach out.
-
 Happy coding!
