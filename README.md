@@ -1,12 +1,12 @@
-# Dr. Pabau Dental Center Lead Generation Form
+# Dental Center Lead Generation Form
 
-For healthier teeth, a beautiful smile, and communication that will give you confidence and help you feel more confident in your everyday life, come to Dr. Pabau Dental Center. Healthy teeth and gums improve your health and appearance.
+For healthier teeth, a beautiful smile, and communication that will give you confidence and help you feel more confident in your everyday life, come to Dental Center. Healthy teeth and gums improve your health and appearance.
 
 This README file provides an overview of the project and instructions for setting it up using XAMPP and WordPress.
 
 ##  Project Description
 
-This project is a WordPress-based lead generation form for Dr. Pabau Dental Center. The form is built with HTML and CSS, and it connects to an API via a self-made proxy and AJAX call to generate leads for the dentist consultant.
+This project is a WordPress-based lead generation form for Dental Center. The form is built with HTML and CSS, and it connects to an API via a self-made proxy and AJAX call to generate leads for the dentist consultant.
 
 ## Screenshots
 
