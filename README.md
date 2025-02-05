@@ -52,6 +52,9 @@ To get started with this project, follow these steps:
 
     REDACTED_API_KEY='your_api_key'
 
+Replace 'your_api_key' with your actual API key.
+Make sure to ignore the .env file by adding it to your .gitignore to prevent it from being committed to the repository.
+
 6.Start the Development Server:
   *  Access your WordPress site at http://localhost/wordpress.
 
