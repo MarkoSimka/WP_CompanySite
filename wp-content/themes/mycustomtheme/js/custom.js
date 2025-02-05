@@ -2,8 +2,8 @@ jQuery(document).ready(function ($) {
   $("#leadForm").on("submit", function (e) {
     e.preventDefault();
 
+    // Gather form data
     var fd = new FormData();
-    fd.append("api_key", "REDACTED_API_KEY");
     fd.append("firstName", $("#firstName").val());
     fd.append("lastName", $("#lastName").val());
     fd.append("email", $("#email").val());

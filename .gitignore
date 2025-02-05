@@ -23,3 +23,6 @@ debug.log
 # IDE
 .idea/
 .vscode/
+
+# Security
+.env 

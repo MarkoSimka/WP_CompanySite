@@ -3,10 +3,37 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
-$apiUrl = 'https://regression.pabau.me/OAuth2/leads/lead-curl.php';
+// Function to load the .env file and retrieve the API key
+function getApiKeyFromEnv() {
+    $envFile = __DIR__ . '/.env'; // Adjust the path to where your .env file is located
+    $apiKey = '';
 
-// Collect the POST data
-$apiKey = $_POST['api_key'] ?? '';
+    if (file_exists($envFile)) {
+        $lines = file($envFile);
+        foreach ($lines as $line) {
+            // Ignore empty lines or comments
+            if (empty($line) || $line[0] === '#') {
+                continue;
+            }
+
+            // Split the key-value pair from the .env file
+            list($key, $value) = explode('=', trim($line), 2);
+            if ($key === 'REDACTED_API_KEY') {
+                $apiKey = trim($value);
+            }
+        }
+    } else {
+        echo json_encode(['error' => 'Environment file not found']);
+        exit; // Exit if .env file is not found
+    }
+
+    return $apiKey;
+}
+
+// Fetch the API key from .env
+$apiKey = getApiKeyFromEnv();
+
+// Collect POST data
 $firstName = $_POST['firstName'] ?? '';
 $lastName = $_POST['lastName'] ?? '';
 $email = $_POST['email'] ?? '';
@@ -28,7 +55,7 @@ $opt_newsletter = $_POST['opt_newsletter'] ?? '';
 $opt_phone = $_POST['opt_phone'] ?? '';
 $redirect_link = $_POST['redirect_link'] ?? '';
 
-// Prepare the data for cURL
+// Prepare data for cURL
 $data = [
     'api_key' => $apiKey,
     'Fname' => $firstName,
@@ -53,7 +80,8 @@ $data = [
     'redirect_link' => $redirect_link
 ];
 
-// Initialize cURL
+// cURL request to the external API
+$apiUrl = 'https://regression.pabau.me/OAuth2/leads/lead-curl.php';
 $ch = curl_init($apiUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
@@ -62,16 +90,18 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Content-Type: application/x-www-form-urlencoded'
 ));
 
-// Execute the request
+// Execute the cURL request and capture the response
 $response = curl_exec($ch);
 
-// Check for errors
+// Check for cURL errors
 if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
+    exit;
 }
 
-// Close cURL session
+// Close the cURL session
 curl_close($ch);
 
 // Output the response
 echo $response;
+?>
