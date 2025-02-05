@@ -46,7 +46,11 @@ To get started with this project, follow these steps:
   *  Activate the theme via the WordPress admin dashboard (Appearance > Themes).
 
 5.Configure the Proxy:
-  *  Ensure the proxy.php file is correctly set up in the theme directory.  
+  *  Ensure the proxy.php file is correctly set up in the theme directory.
+  *  Create a .env file in the root of your project if it doesn't already exist.
+  *  Add the following line to the .env file:
+
+    REDACTED_API_KEY='your_api_key'
 
 6.Start the Development Server:
   *  Access your WordPress site at http://localhost/wordpress.
